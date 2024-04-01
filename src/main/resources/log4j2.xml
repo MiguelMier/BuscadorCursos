@@ -1,47 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="warn">
-    <Properties>
-        <Property name="basePath">C:\Users\miguel.mier\Desktop\BootCamp\Sesion 9\springboot\clientesbanco\clientesbanco\src\main\java\es\babel\clientesbanco\utils\logs</Property>
-    </Properties>
-
+<Configuration status="INFO">
     <Appenders>
-        <!-- RollingFile Appender for file logging -->
-        <RollingFile name="fileLogger"
-                     fileName="${basePath}/app.log"
-                     filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
-            <PatternLayout>
-                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
-            </PatternLayout>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
-                <SizeBasedTriggeringPolicy size="20MB" />
-            </Policies>
-            <!-- Max 10 files will be created every day -->
-            <DefaultRolloverStrategy max="10">
-                <Delete basePath="${basePath}" maxDepth="10">
-                    <!-- Delete all files older than 30 days -->
-                    <IfLastModified age="30d" />
-                </Delete>
-            </DefaultRolloverStrategy>
-        </RollingFile>
+        <File name="FILE_TIEMPOS_RESPUESTA" fileName="./tiemposrespuesta.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Filters>
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </File>
 
-        <!-- Console Appender for Spring startup logging -->
-        <Console name="consoleLogger" target="SYSTEM_OUT">
-            <PatternLayout>
-                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
-            </PatternLayout>
-        </Console>
+        <File name="FILE_SOLICITUD" fileName="./solicitud.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Filters>
+                <ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </File>
     </Appenders>
 
     <Loggers>
-        <!-- Logger for file logging -->
-        <Root level="info" additivity="false">
-            <appender-ref ref="fileLogger" />
-        </Root>
+        <Logger name="es.babel" level="TRACE" additivity="false">
+            <AppenderRef ref="FILE_TIEMPOS_RESPUESTA" />
+        </Logger>
 
-        <!-- Logger for Spring startup logging -->
-        <Logger name="org.springframework" level="info" additivity="false">
-            <appender-ref ref="consoleLogger" />
+        <Logger name="es.babel" level="INFO" additivity="false">
+            <AppenderRef ref="FILE_SOLICITUD" />
         </Logger>
     </Loggers>
 </Configuration>
