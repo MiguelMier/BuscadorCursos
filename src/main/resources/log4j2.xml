@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="warn">
     <Properties>
-        <Property name="basePath">C:\Users\miguel.mier\Desktop\BootCamp\Sesion 9\springboot\clientesbanco\clientesbanco\src\main\java\es\babel\clientesbanco\utils\logs</Property>
+        <Property name="basePath">C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\src\main\java\es\babel\buscadorcursos\utils\logs</Property>
     </Properties>
 
     <Appenders>

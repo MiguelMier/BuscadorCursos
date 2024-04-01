@@ -4,19 +4,26 @@ import es.babel.buscadorcursos.model.Alumno;
 import es.babel.buscadorcursos.model.Curso;
 import es.babel.buscadorcursos.model.Formador;
 import es.babel.buscadorcursos.model.enums.Modalidad;
+import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
+@Repository
 public class FakeBD {
 
     private List<Curso> listaCursos;
     private List<Alumno> listaAlumnos;
+    private Map<Curso, Alumno> alumnosCurso;
     
     public FakeBD(){
         crearAlumnos();
         crearCursos();
+        crearMatriculacion();
+    }
+
+    private void crearMatriculacion() {
+        alumnosCurso = new HashMap<>();
+        alumnosCurso.put(listaCursos.get(0),listaAlumnos.get(0));
     }
 
     private void crearCursos() {
@@ -33,6 +40,8 @@ public class FakeBD {
                 Modalidad.PRESENCIAL, 99.99, true, "Calle 123", new Date(), new Date(), formadores1));
         listaCursos.add(new Curso("C002", "Diseño gráfico básico", "Diseño", 30,
                 Modalidad.ONLINE, 79.99, false, "Online", new Date(), new Date(), formadores2));
+
+
     }
 
     private void crearAlumnos() {
@@ -58,5 +67,9 @@ public class FakeBD {
 
     public void setListaAlumnos(List<Alumno> listaAlumnos) {
         this.listaAlumnos = listaAlumnos;
+    }
+
+    public void matricularAlumno(Curso curso, Alumno alumno){
+        alumnosCurso.put(curso, alumno);
     }
 }
