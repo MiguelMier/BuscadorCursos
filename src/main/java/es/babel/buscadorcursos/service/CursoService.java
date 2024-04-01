@@ -16,7 +16,7 @@ public class CursoService {
 
 
     public List<Curso> obtenerTodosCursos() {
-        return fakeBD
+        return fakeBD.getListaCursos();
     }
 
     public List<Curso> obtenerCursoArea(String curso) {
