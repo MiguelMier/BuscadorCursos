@@ -19,3 +19,29 @@ Debido a que habrá dos equipos (front y backend) y a que se tienen que integrar
 El departamento de arquitectura nos solicita que la aplicación cumpla las especificaciones restFul
 
 Para el ejercicio no es necesario implementar persistencia de datos, podría ser una mejora del ejercicio.
+
+## DEFINICIÓN DE ENDPOINTS
+
+GET: "/curso"
+Devuelve todos los cursos de la BD (fakebd)
+
+GET:"/curso/{id}"
+Devuelve el curso cuyo id se especifica
+Param: String id
+
+GET: "/area/{area}"
+Devuelve los cursos cuya area se especifica
+Param: String area
+
+GET: "/hora/{hora}"
+Devuelve los cursos cuyas horas se especifica
+Param: double hora
+
+GET: "/modalidad/{modalidad}"
+Devuelve los cursos cuya modalidad se especifica
+Param: String modalidad --> luego se comprueba la modalidad del enum
+
+POST: "/matricular"
+Matricula al alumno deseado en el curso deseado
+Body: Alumno alumno, String idCurso
+
