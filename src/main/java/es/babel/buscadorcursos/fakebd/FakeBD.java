@@ -2,21 +2,30 @@ package es.babel.buscadorcursos.fakebd;
 
 import es.babel.buscadorcursos.model.Alumno;
 import es.babel.buscadorcursos.model.Curso;
+import es.babel.buscadorcursos.model.DTO.CursoDTO;
 import es.babel.buscadorcursos.model.Formador;
 import es.babel.buscadorcursos.model.enums.Modalidad;
+import es.babel.buscadorcursos.utils.LogUtils;
+import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
+@Repository
 public class FakeBD {
 
     private List<Curso> listaCursos;
     private List<Alumno> listaAlumnos;
+    private Map<Curso, Alumno> alumnosCurso;
     
     public FakeBD(){
         crearAlumnos();
         crearCursos();
+        crearMatriculacion();
+    }
+
+    private void crearMatriculacion() {
+        alumnosCurso = new HashMap<>();
+        alumnosCurso.put(listaCursos.get(0),listaAlumnos.get(0));
     }
 
     private void crearCursos() {
@@ -33,6 +42,8 @@ public class FakeBD {
                 Modalidad.PRESENCIAL, 99.99, true, "Calle 123", new Date(), new Date(), formadores1));
         listaCursos.add(new Curso("C002", "Diseño gráfico básico", "Diseño", 30,
                 Modalidad.ONLINE, 79.99, false, "Online", new Date(), new Date(), formadores2));
+
+
     }
 
     private void crearAlumnos() {
@@ -58,5 +69,43 @@ public class FakeBD {
 
     public void setListaAlumnos(List<Alumno> listaAlumnos) {
         this.listaAlumnos = listaAlumnos;
+    }
+
+    public void matricularAlumno(Curso curso, Alumno alumno){
+        alumnosCurso.put(curso, alumno);
+    }
+
+    public CursoDTO getCursoDTOId(String id){
+        for(Curso c: listaCursos){
+            if(c.getCursoID().equals(id)) {
+                LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
+                CursoDTO cursopedido = copiarDatoCurso(c);
+                return cursopedido;
+            }
+        }
+
+        return null;
+    }
+
+    public Curso getCursoId(String id){
+        for(Curso c: listaCursos){
+            if(c.getCursoID().equals(id)) {
+                LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
+                return c;
+            }
+        }
+
+        return null;
+    }
+
+    private CursoDTO copiarDatoCurso(Curso c) {
+        CursoDTO cursopedido = new CursoDTO();
+        cursopedido.setIdCurso(c.getCursoID());
+        cursopedido.setArea(c.getArea());
+        cursopedido.setModalidad(c.getModalidad());
+        cursopedido.setPrecio(c.getPrecio());
+        cursopedido.setNombre(c.getNombreCurso());
+        cursopedido.setNumeroHora(c.getNumeroHoras());
+        return cursopedido;
     }
 }

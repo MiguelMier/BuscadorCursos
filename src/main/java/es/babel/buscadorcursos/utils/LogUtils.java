@@ -27,4 +27,8 @@ public class LogUtils {
     public static void logFatal(String msg){
         logger.fatal(msg);
     }
+
+    public static void logTrace(String msg){
+        logger.trace(msg);
+    }
 }
