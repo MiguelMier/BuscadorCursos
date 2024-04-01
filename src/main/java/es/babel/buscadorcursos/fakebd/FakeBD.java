@@ -4,6 +4,7 @@ import es.babel.buscadorcursos.model.Alumno;
 import es.babel.buscadorcursos.model.Curso;
 import es.babel.buscadorcursos.model.Formador;
 import es.babel.buscadorcursos.model.enums.Modalidad;
+import es.babel.buscadorcursos.utils.LogUtils;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -71,5 +72,16 @@ public class FakeBD {
 
     public void matricularAlumno(Curso curso, Alumno alumno){
         alumnosCurso.put(curso, alumno);
+    }
+
+    public Curso getCursoId(String id){
+        for(Curso c: listaCursos){
+            if(c.getCursoID().equals(id)) {
+                LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
+                return c;
+            }
+        }
+
+        return null;
     }
 }

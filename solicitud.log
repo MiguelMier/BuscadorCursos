@@ -1,0 +1,45 @@
+12:30:07.155 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 5808 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:30:07.171 [main] DEBUG es.babel.buscadorcursos.BuscadorcursosApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+12:30:07.172 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:30:09.512 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.884 seconds (process running for 4.203)
+12:30:20.928 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 7800
+12:30:20.930 [http-nio-8080-exec-2] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+12:35:25.118 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 18276 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:35:25.151 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:35:27.288 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.891 seconds (process running for 4.109)
+12:35:32.652 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 8600
+12:39:24.337 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 7752 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:39:24.360 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:39:26.561 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.81 seconds (process running for 3.936)
+12:40:30.504 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 6764 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:40:30.523 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:40:32.767 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.909 seconds (process running for 4.051)
+12:40:37.234 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 9100
+12:40:38.214 [http-nio-8080-exec-3] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 1700
+12:42:19.795 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 13476 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:42:19.818 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:42:21.949 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.793 seconds (process running for 3.875)
+12:42:24.531 [http-nio-8080-exec-1] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 8300
+12:45:45.326 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 9544 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+12:45:45.363 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+12:45:47.650 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 3.011 seconds (process running for 4.116)
+12:46:12.172 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 8000
+12:47:05.482 [http-nio-8080-exec-3] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 2100
+12:47:15.316 [http-nio-8080-exec-4] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 3000
+12:49:47.667 [http-nio-8080-exec-7] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 1900
+12:53:43.266 [http-nio-8080-exec-4] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 2300
+13:00:34.138 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 13140 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+13:00:34.163 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+13:00:36.357 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.925 seconds (process running for 4.029)
+13:02:25.919 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 17660 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+13:02:25.953 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+13:02:28.320 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 3.156 seconds (process running for 4.54)
+13:02:49.849 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 4996 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+13:02:49.883 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+13:02:52.045 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.834 seconds (process running for 3.945)
+13:02:55.254 [http-nio-8080-exec-1] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno null: 1080200
+13:02:56.643 [http-nio-8080-exec-3] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno null: 39400
+13:04:43.513 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 676 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+13:04:43.534 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+13:04:45.635 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 2.727 seconds (process running for 3.818)
+13:04:49.624 [http-nio-8080-exec-1] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 13100

@@ -36,4 +36,8 @@ public class Curso {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
     }
+
+    public String getCursoID() {
+        return cursoID;
+    }
 }

@@ -94,7 +94,7 @@ public class CursoService implements ICursoService{
         return cursosTemp;
     }
 
-    public Curso obtenerCursoID(String id) {
+    public Curso obtenerCursoIDv1(String id) {
         for(Curso c: fakeBD.getListaCursos()){
             if(c.getCursoID().equals(id)) {
                 LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
@@ -103,6 +103,10 @@ public class CursoService implements ICursoService{
         }
         throw new IllegalArgumentException("Curso no encontrado: " + id);
 
+    }
+
+    public Curso obtenerCursoID(String id) {
+        return fakeBD.getCursoId(id);
     }
 
     public void matricularAlumno(Alumno alumno, String idCurso) {

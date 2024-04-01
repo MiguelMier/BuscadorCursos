@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <File name="FILE_TIEMPOS_RESPUESTA" fileName="./tiemposrespuesta.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Filters>
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </File>
+
+        <File name="FILE_SOLICITUD" fileName="./solicitud.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Filters>
+                <ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="es.babel" level="TRACE" additivity="false">
+            <AppenderRef ref="FILE_TIEMPOS_RESPUESTA" />
+        </Logger>
+
+        <Logger name="es.babel" level="INFO" additivity="false">
+            <AppenderRef ref="FILE_SOLICITUD" />
+        </Logger>
+    </Loggers>
+</Configuration>
