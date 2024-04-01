@@ -3,6 +3,7 @@ package es.babel.buscadorcursos.controller;
 import es.babel.buscadorcursos.fakebd.FakeBD;
 import es.babel.buscadorcursos.model.Alumno;
 import es.babel.buscadorcursos.model.Curso;
+import es.babel.buscadorcursos.model.DTO.CursoDTO;
 import es.babel.buscadorcursos.service.CursoService;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,8 +43,8 @@ public class CursoController {
     }
 
     @GetMapping("/{id}")
-    public Curso obtenerCursoID(@RequestBody String id){
-        return cursoService.obtenerCursoID(id);
+    public CursoDTO obtenerCursoID(@RequestBody String id){
+        return cursoService.obtenerCursoDTOID(id);
     }
 
     @PostMapping("/matricular")

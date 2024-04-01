@@ -3,6 +3,7 @@ package es.babel.buscadorcursos.service;
 import es.babel.buscadorcursos.fakebd.FakeBD;
 import es.babel.buscadorcursos.model.Alumno;
 import es.babel.buscadorcursos.model.Curso;
+import es.babel.buscadorcursos.model.DTO.CursoDTO;
 import es.babel.buscadorcursos.model.enums.Modalidad;
 import es.babel.buscadorcursos.utils.LogUtils;
 import org.springframework.stereotype.Service;
@@ -105,7 +106,11 @@ public class CursoService implements ICursoService{
 
     }
 
-    public Curso obtenerCursoID(String id) {
+    public CursoDTO obtenerCursoDTOID(String id) {
+        return fakeBD.getCursoDTOId(id);
+    }
+
+    private Curso obtenerCursoID(String id) {
         return fakeBD.getCursoId(id);
     }
 
