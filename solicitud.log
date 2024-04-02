@@ -81,3 +81,45 @@
 12:41:18.288 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: ABCD
 12:56:02.424 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 72200
 12:56:02.447 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+13:05:29.961 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:15:02.595 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:16:12.421 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 64700
+13:16:12.443 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+13:24:40.106 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:24:40.140 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:24:40.141 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:24:40.142 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1156700
+13:24:40.171 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 89700
+13:24:40.182 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+13:24:40.188 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 13500
+13:24:40.188 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+13:39:14.683 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:39:14.699 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:39:14.700 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1599529200
+13:41:53.320 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:41:53.333 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:41:53.334 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1073550700
+13:44:26.480 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:44:26.503 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:44:26.505 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1051317600
+13:47:23.565 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:47:23.575 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:47:23.576 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 927011000
+13:48:46.135 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:48:46.174 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:48:46.175 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:48:46.175 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1078000
+13:48:46.184 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 56600
+13:48:46.191 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+13:48:46.197 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 8100
+13:48:46.198 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+13:49:52.356 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:49:52.395 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+13:49:52.395 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+13:49:52.395 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 728300
+13:49:52.403 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 137700
+13:49:52.409 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+13:49:52.416 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 7200
+13:49:52.417 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+13:49:52.417 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 6800
+13:49:52.417 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos

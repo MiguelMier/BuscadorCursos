@@ -38,7 +38,8 @@ class CursoServiceTest {
         sut.obtenerTodosCursos();
 
         // then
-        verify(fakeBD, times(1)).getListaCursos();
+        assertEquals(2, sut.obtenerTodosCursos().size());
+        //verify(fakeBD, times(1)).getListaCursos();
     }
 
     @Test
@@ -80,16 +81,27 @@ class CursoServiceTest {
         // then
         Assertions.assertTrue(sut.getMatriculados().containsValue(alumno));
         Assertions.assertTrue(sut.getMatriculados().containsKey(curso));
+        Assertions.assertEquals(curso, sut.getMatriculados().keySet().stream().toList().get(0));
     }
 
     @Test
-    void testMatricular_matricularCursoNoExiste(){
+    void testMatricular_shouldThrowIllegalArgument_matricularCursoNoExiste(){
         // given
         Alumno alumno = new Alumno("Borja", "Baston", "12345678A");
 
         // when + then
         assertThrows(IllegalArgumentException.class, () -> {
             sut.matricularAlumno(alumno,"ABCD");
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            sut.matricularAlumno(alumno,"");
+        });
+    }
+
+    @Test
+    void testMatricular_matricularAlumnoNoExiste(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            sut.matricularAlumno(null,"C001");
         });
     }
 
@@ -109,8 +121,6 @@ class CursoServiceTest {
             sut.obtenerCursoModalidad("ABCD");
         });
     }
-
-
 
 
 }

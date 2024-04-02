@@ -87,9 +87,16 @@ public class CursoService implements ICursoService{
     }
 
     public void matricularAlumno(Alumno alumno, String idCurso) {
+        if (idCurso == null || idCurso.isEmpty()) {
+            throw new IllegalArgumentException("El ID del curso no puede ser nulo o vacío");
+        }
+        if (alumno == null) {
+            throw new IllegalArgumentException("El alumno no puede ser nulo");
+        }
+
         Long startTime = System.nanoTime();
 
-        fakeBD.matricularAlumno(obtenerCursoID(idCurso), Objects.requireNonNull(alumno));
+        fakeBD.matricularAlumno(obtenerCursoID(idCurso), alumno);
 
         Long endTime = System.nanoTime();
         Long totalTime = endTime - startTime;

@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Data
 public class Curso {
@@ -39,5 +40,18 @@ public class Curso {
 
     public String getCursoID() {
         return cursoID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Curso curso = (Curso) o;
+        return Objects.equals(cursoID, curso.cursoID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cursoID);
     }
 }

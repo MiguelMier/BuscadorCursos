@@ -59,17 +59,6 @@ public class FakeBD {
         return listaCursos;
     }
 
-    public void setListaCursos(List<Curso> listaCursos) {
-        this.listaCursos = listaCursos;
-    }
-
-    public List<Alumno> getListaAlumnos() {
-        return listaAlumnos;
-    }
-
-    public void setListaAlumnos(List<Alumno> listaAlumnos) {
-        this.listaAlumnos = listaAlumnos;
-    }
 
     public void matricularAlumno(Curso curso, Alumno alumno){
         if (curso == null) {
