@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Service
@@ -18,7 +19,7 @@ public class CursoService implements ICursoService{
     private final FakeBD fakeBD;
 
     public CursoService(FakeBD fakeBD) {
-        this.fakeBD = fakeBD;
+        this.fakeBD = new FakeBD();
     }
 
     public List<Curso> obtenerTodosCursos() {
@@ -35,7 +36,7 @@ public class CursoService implements ICursoService{
         Long startTime = System.nanoTime();
         List<Curso> cursosTemp = new ArrayList<>();
         for(Curso c: fakeBD.getListaCursos()){
-            if(c.getArea().equals(area)) {
+            if(c.getArea().equalsIgnoreCase(area)) {
                 cursosTemp.add(c);
             }
         }
@@ -70,6 +71,43 @@ public class CursoService implements ICursoService{
     public List<Curso> obtenerCursoModalidad(String modalidad) {
         Long startTime = System.nanoTime();
 
+        Modalidad modalidadTemp = checkModalidad(modalidad);
+
+        List<Curso> cursosTemp = getCursoByModalidad(modalidadTemp);
+        Long endTime = System.nanoTime();
+        Long totalTime = endTime - startTime;
+        LogUtils.logInfo(" * Tiempo empleado para encontrar los cursos de la modalidad " + modalidad +": " + totalTime);
+        LogUtils.logTrace(" - Se han encontrado " + cursosTemp.size() + " cursos de modalidad: " + modalidad);
+
+        return cursosTemp;
+    }
+
+    public CursoDTO obtenerCursoDTOID(String id) {
+        return fakeBD.getCursoDTOId(id);
+    }
+
+    public void matricularAlumno(Alumno alumno, String idCurso) {
+        Long startTime = System.nanoTime();
+
+        fakeBD.matricularAlumno(obtenerCursoID(idCurso), Objects.requireNonNull(alumno));
+
+        Long endTime = System.nanoTime();
+        Long totalTime = endTime - startTime;
+        LogUtils.logTrace(" - Se ha matriculado al alumno: " + alumno.getNombre() + " en el curso: " + idCurso);
+        LogUtils.logInfo(" * Tiempo empleado para matricular al alumno " + alumno.getNombre() +": " + totalTime);
+    }
+
+    public Map<Curso, Alumno> getMatriculados(){
+        return fakeBD.getAlumnosCurso();
+    }
+
+    // MÉTODOS PRIVADOS
+
+    private Curso obtenerCursoID(String id) {
+        return fakeBD.getCursoId(id);
+    }
+
+    private Modalidad checkModalidad(String modalidad) {
         Modalidad modalidadTemp = null;
         if (modalidad.equalsIgnoreCase("presencial")) {
             modalidadTemp = Modalidad.PRESENCIAL;
@@ -80,47 +118,16 @@ public class CursoService implements ICursoService{
         } else {
             throw new IllegalArgumentException("Modalidad no válida: " + modalidad);
         }
+        return modalidadTemp;
+    }
 
+    private List<Curso> getCursoByModalidad(Modalidad modalidadTemp) {
         List<Curso> cursosTemp = new ArrayList<>();
         for (Curso c : fakeBD.getListaCursos()) {
             if (c.getModalidad().equals(modalidadTemp)) {
                 cursosTemp.add(c);
             }
         }
-        Long endTime = System.nanoTime();
-        Long totalTime = endTime - startTime;
-        LogUtils.logInfo(" * Tiempo empleado para encontrar los cursos de la modalidad " + modalidad +": " + totalTime);
-        LogUtils.logTrace(" - Se han encontrado " + cursosTemp.size() + " cursos de modalidad: " + modalidad);
-
         return cursosTemp;
-    }
-
-    public Curso obtenerCursoIDv1(String id) {
-        for(Curso c: fakeBD.getListaCursos()){
-            if(c.getCursoID().equals(id)) {
-                LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
-                return c;
-            }
-        }
-        throw new IllegalArgumentException("Curso no encontrado: " + id);
-
-    }
-
-    public CursoDTO obtenerCursoDTOID(String id) {
-        return fakeBD.getCursoDTOId(id);
-    }
-
-    private Curso obtenerCursoID(String id) {
-        return fakeBD.getCursoId(id);
-    }
-
-    public void matricularAlumno(Alumno alumno, String idCurso) {
-        Long startTime = System.nanoTime();
-
-        LogUtils.logTrace(" - Se ha matriculado al alumno: " + alumno.getNombre() + " en el curso: " + idCurso);
-        fakeBD.matricularAlumno(obtenerCursoID(idCurso), Objects.requireNonNull(alumno));
-        Long endTime = System.nanoTime();
-        Long totalTime = endTime - startTime;
-        LogUtils.logInfo(" * Tiempo empleado para matricular al alumno " + alumno.getNombre() +": " + totalTime);
     }
 }

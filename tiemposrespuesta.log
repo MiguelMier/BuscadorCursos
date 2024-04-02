@@ -1,0 +1,13 @@
+10:30:41.143 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 357160900
+12:03:36.551 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 867850200
+12:08:49.953 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1353388600
+12:11:38.714 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1292818600
+12:12:47.692 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1279883200
+12:14:05.398 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 74191000
+12:15:38.652 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1338993000
+12:21:50.990 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1666576300
+12:22:56.689 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1207794700
+12:24:34.008 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1242484300
+12:24:52.552 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1587421900
+12:33:16.138 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1110878600
+12:56:02.424 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 72200

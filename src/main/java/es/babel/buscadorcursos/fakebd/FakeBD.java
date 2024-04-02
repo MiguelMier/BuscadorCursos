@@ -72,6 +72,9 @@ public class FakeBD {
     }
 
     public void matricularAlumno(Curso curso, Alumno alumno){
+        if (curso == null) {
+            throw new IllegalArgumentException("Curso cannot be null");
+        }
         alumnosCurso.put(curso, alumno);
     }
 
@@ -89,13 +92,12 @@ public class FakeBD {
 
     public Curso getCursoId(String id){
         for(Curso c: listaCursos){
-            if(c.getCursoID().equals(id)) {
+            if(c.getCursoID().equalsIgnoreCase(id)) {
                 LogUtils.logTrace(" - Curso encontrado: ID: " + id + " nombre: " + c.getNombreCurso());
                 return c;
             }
         }
-
-        return null;
+        throw new IllegalArgumentException("No existe el curso pedido " + id);
     }
 
     private CursoDTO copiarDatoCurso(Curso c) {
@@ -107,5 +109,9 @@ public class FakeBD {
         cursopedido.setNombre(c.getNombreCurso());
         cursopedido.setNumeroHora(c.getNumeroHoras());
         return cursopedido;
+    }
+
+    public Map<Curso, Alumno> getAlumnosCurso() {
+        return alumnosCurso;
     }
 }
