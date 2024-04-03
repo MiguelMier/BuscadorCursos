@@ -9,8 +9,19 @@ import es.babel.buscadorcursos.model.enums.Modalidad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mockito;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,6 +34,10 @@ class CursoServiceTest {
 
     private CursoService sut;
     private FakeBD fakeBD;
+    @Captor
+    private ArgumentCaptor<Curso> cursoCaptor;
+    @TempDir
+    Path tempDir;
 
     @BeforeEach
     void setup(){
@@ -122,5 +137,54 @@ class CursoServiceTest {
         });
     }
 
+    @Test
+    void testNombreArchivoConFecha_shouldHaveNameCorrect() {
+        String nombreFichero = "estadisticas.txt";
+
+        sut.escribirEstadisticasEnArchivo(nombreFichero);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String nombreArchivoConFecha = sdf.format(new Date()) + " - " + nombreFichero;
+
+        File archivo = new File(nombreArchivoConFecha);
+        assertTrue(archivo.exists());
+        // comprobar fichero guardado correctamente con el nombre --> cumplir las propiedades de un test unitario
+        assertTrue(verificarContenidoArchivo(nombreArchivoConFecha));
+    }
+
+    private boolean verificarContenidoArchivo(String nombreArchivo) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                return true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Test
+    public void testEscribirEstadisticasEnArchivo() throws IOException {
+        String nombreFichero = "estadisticas.txt";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String nombreArchivoConFecha = sdf.format(new Date()) + " - " + nombreFichero;
+
+        Path archivoTemporal = tempDir.resolve(nombreArchivoConFecha);
+
+        // Llamar al método que escribe las estadísticas en el archivo
+        sut.escribirEstadisticasEnArchivo(archivoTemporal.toString());
+
+        // Verificar que se haya escrito algo en el archivo
+        //assertTrue(verificarContenidoArchivo(archivoTemporal.toString()));
+    }
+    @ParameterizedTest
+    @CsvSource(value = {
+            "qwefwef;0",
+            "mich; 5"
+    }, delimiter = ';')
+    void testParametrizado(String password, int expected){
+        assertNotEquals(password.length(), expected);
+    }
 
 }

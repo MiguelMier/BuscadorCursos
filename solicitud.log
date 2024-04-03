@@ -137,3 +137,60 @@
 13:54:09.896 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
 13:54:13.043 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 3.909 seconds (process running for 5.107)
 13:55:26.845 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 7500
+09:20:54.347 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+09:20:54.410 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+09:20:54.411 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+09:20:54.412 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1032600
+09:20:54.436 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 90300
+09:20:54.446 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+09:20:54.456 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 11500
+09:20:54.462 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+09:20:54.463 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 16300
+09:20:54.463 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+09:22:05.576 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 5000 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:22:05.594 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:22:10.527 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 5.774 seconds (process running for 7.239)
+09:23:32.546 [http-nio-8080-exec-7] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 10900
+09:23:42.513 [http-nio-8080-exec-10] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 4200
+09:24:05.991 [http-nio-8080-exec-1] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 4500
+09:24:10.585 [http-nio-8080-exec-4] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 2700
+09:31:53.129 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 11212 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:31:53.170 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:31:58.312 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 6.383 seconds (process running for 8.275)
+09:35:52.654 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 7248 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:35:52.684 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:35:57.186 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 5.531 seconds (process running for 7.306)
+09:46:09.085 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 11400 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:46:09.118 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:46:14.976 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 6.977 seconds (process running for 9.055)
+09:46:48.819 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 2416 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:46:48.874 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:46:53.735 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 5.897 seconds (process running for 7.604)
+09:47:52.411 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 12180 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+09:47:52.459 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+09:47:57.166 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 5.762 seconds (process running for 7.286)
+09:48:08.377 [http-nio-8080-exec-3] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno null: 1589700
+10:31:21.738 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Starting BuscadorcursosApplication using Java 17.0.10 with PID 18532 (C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos\target\classes started by miguel.mier in C:\Users\miguel.mier\Desktop\BootCamp\Sesion 23\buscadorcursos\buscadorcursos)
+10:31:21.780 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - No active profile set, falling back to 1 default profile: "default"
+10:31:27.622 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication - Started BuscadorcursosApplication in 6.959 seconds (process running for 8.809)
+10:31:29.062 [http-nio-8080-exec-2] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 12900
+12:17:16.148 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+12:17:16.232 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+12:17:16.233 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+12:17:16.234 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 987600
+12:17:16.251 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 42100
+12:17:16.257 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+12:17:16.311 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 7400
+12:17:16.312 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+12:17:16.315 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 13100
+12:17:16.315 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+12:18:03.444 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+12:18:03.557 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Curso encontrado: ID: C001 nombre: Introducción a la programación
+12:18:03.558 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se ha matriculado al alumno: Borja en el curso: C001
+12:18:03.560 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para matricular al alumno Borja: 1133700
+12:18:03.583 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar los cursos de la modalidad online: 117700
+12:18:03.591 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Se han encontrado 1 cursos de modalidad: online
+12:18:03.654 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 17000
+12:18:03.655 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos
+12:18:03.659 [main] INFO  es.babel.buscadorcursos.BuscadorcursosApplication -  * Tiempo empleado para encontrar todos los cursos: 13800
+12:18:03.659 [main] TRACE es.babel.buscadorcursos.BuscadorcursosApplication -  - Listado de cursos obtenidos

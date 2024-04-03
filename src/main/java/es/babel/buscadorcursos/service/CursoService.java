@@ -8,10 +8,11 @@ import es.babel.buscadorcursos.model.enums.Modalidad;
 import es.babel.buscadorcursos.utils.LogUtils;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class CursoService implements ICursoService{
@@ -27,6 +28,7 @@ public class CursoService implements ICursoService{
         List<Curso> cursotemp = fakeBD.getListaCursos();
         Long endTime = System.nanoTime();
         Long totalTime = endTime - startTime;
+        escribirEstadisticasEnArchivo("hola.txt");
         LogUtils.logInfo(" * Tiempo empleado para encontrar todos los cursos: " + totalTime);
         LogUtils.logTrace(" - Listado de cursos obtenidos");
         return cursotemp;
@@ -84,6 +86,33 @@ public class CursoService implements ICursoService{
 
     public CursoDTO obtenerCursoDTOID(String id) {
         return fakeBD.getCursoDTOId(id);
+    }
+
+    public void escribirEstadisticasEnArchivo(String nombreFichero) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String nombreArchivoConFecha = sdf.format(new Date()) + " - " + nombreFichero;
+        try (FileWriter writer = new FileWriter(nombreArchivoConFecha)) {
+            double promedioHoras = calcularPromedioHoras();
+            int cantidadCursos = fakeBD.getListaCursos().size();
+
+            writer.write("Estadísticas relevantes:");
+            writer.write("Cantidad de cursos: " + cantidadCursos);
+            writer.write("Promedio de horas por curso: " + promedioHoras);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private double calcularPromedioHoras() {
+        if (fakeBD.getListaCursos().isEmpty()) {
+            return 0.0;
+        }
+        double totalHoras = 0;
+        for (Curso curso : fakeBD.getListaCursos()) {
+            totalHoras += curso.getNumeroHoras();
+        }
+        return totalHoras / fakeBD.getListaCursos().size();
     }
 
     public void matricularAlumno(Alumno alumno, String idCurso) {

@@ -23,8 +23,7 @@ public class CursoController {
     }
 
     @GetMapping
-    public List<Curso> obtenerTodosCursos(){
-        return cursoService.obtenerTodosCursos();
+    public List<Curso> obtenerTodosCursos(){return cursoService.obtenerTodosCursos();
     }
 
     @GetMapping("/area/{area}")
@@ -48,8 +47,8 @@ public class CursoController {
     }
 
     @PostMapping("/matricular")
-    public void matricularAlumno(@RequestBody Alumno alumno, String idCurso){
-        cursoService.matricularAlumno(alumno, idCurso);
+    public void matricularAlumno(@RequestBody Alumno alumno){
+        cursoService.matricularAlumno(alumno, "C001");
     }
 
 }
